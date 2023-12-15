@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>small project</title>
+    </head>
+    <body>
+        <button style="background-color:black;color:wheat; padding:20px;">change color</button>
+
+    </body>
+    <script>
+        const btn = document.querySelector("button");
+        function random(number){
+            return Math.floor(Math.random()*(number + 1));
+        }
+        btn.addEventListener("click",() => {
+            const randomColor = `rgb(${random(255)},${random(255)},${random(255)})`;
+            document.body.style.backgroundColor = randomColor;
+        })
+    </script>
+</html>
+<!--
+    rgb-every color is available in rgb
+    -javascript is synchronous and it is single threaded
+    
+
+-->
